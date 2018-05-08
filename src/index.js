@@ -1,4 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const askName = () => readlineSync.question('May I have your name? ' ,{
+console.log('Welcome to Brain Games!');
+export const askName = readlineSync.question('May I have your name? ' ,{
   defaultInput: 'Anonim'});
+console.log(`Hello, ${askName}!`);
