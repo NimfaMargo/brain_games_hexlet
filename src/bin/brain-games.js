@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import {askName} from '..';
+import start from '..';
+
+start();
