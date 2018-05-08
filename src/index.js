@@ -6,4 +6,4 @@ const start = () => {
   console.log(`Hello, ${askName}!`);
 };
 
-export default start;
+export default start
