@@ -44,10 +44,15 @@ const gameEven = (username, iter) => {
   return true;
 };
 
-const runEvenGame = () => {
+export const runEvenGame = () => {
   greetUser();
   showEvenGameRules();
   const username = getUsername();
   return gameEven(username, 0);
 };
-export default runEvenGame;
+
+export const runGames = () => {
+  console.log('Welcome to Brain Games!');
+  const askName = readlineSync.question('May I have your name? ', { defaultInput: 'Anonim' });
+  console.log(`Hello, ${askName}!`);
+};
