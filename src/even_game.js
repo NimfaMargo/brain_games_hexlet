@@ -1,35 +1,28 @@
-
 import readlineSync from 'readline-sync';
+import { getRandomNumber, isEven } from './num_operations';
 
-const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
-const isEven = num => num % 2 === 0;
+const defineRightAnswer = number => (isEven(number) ? 'yes' : 'no');
 
-const toBool = (answer) => {
-  if (answer === 'yes' || answer === 'no') {
-    return answer === 'yes';
+const lastGameLap = 3;
+const maxAllowedNumber = 100;
+
+const gameEven = (username, lap) => {
+  if (lap === lastGameLap) {
+    console.log(`Congratulations, ${username}!`);
+    return;
   }
-  return undefined;
-};
+  const questionNumber = getRandomNumber(maxAllowedNumber);
+  const rightAnswer = defineRightAnswer(questionNumber);
 
-const resultFormating = bool => (bool ? 'yes' : 'no');
-
-const gameEven = (username, iter) => {
-  const lastGameIterationValue = 3;
-  if (iter === lastGameIterationValue) {
-    return console.log(`Congratulations, ${username}!`);
-  }
-  const maxNum = 100;
-  const randomNum = getRandomInt(maxNum);
-  console.log('Question:', randomNum);
+  console.log('Question:', questionNumber);
   const userAswer = readlineSync.question('Your answer: ');
-  const looseMessage = (`'${userAswer}' is wrong answer ;(.
-    Correct answer was '${resultFormating(isEven(randomNum))}'. Let's try again, ${username}`);
 
-  if (toBool(userAswer) === isEven(randomNum)) {
+  if (userAswer === rightAnswer) {
     console.log('Correct!');
-    return gameEven(username, iter + 1);
+    gameEven(username, lap + 1);
+  } else {
+    console.log(`'${userAswer}' is wrong answer ;(.
+    Correct answer was '${rightAnswer}'. Let's try again, ${username}`);
   }
-  console.log(looseMessage);
-  return true;
 };
 export default gameEven;
