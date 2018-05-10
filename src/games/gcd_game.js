@@ -3,7 +3,7 @@ import { getRandomNumber, gcd } from '../utils';
 import { getUsername } from '..';
 
 const defineRightAnswer = (num1, num2) => gcd(num1, num2);
-const maxNumber = 10;
+const maxNumber = 100;
 const lastGameLap = 3;
 
 const gameGcd = (username, lap) => {
