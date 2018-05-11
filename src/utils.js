@@ -1,6 +1,5 @@
 export const getRandomNumber = max => Math.floor(Math.random() * Math.floor(max));
 export const getRandomArbitrary = (min, max) => Math.floor((Math.random() * (max - min)) + min);
-
 export const isEven = num => num % 2 === 0;
 export const gcd = (num1, num2) => {
   if (num2 === 0) {
@@ -16,7 +15,7 @@ export const getBalanceNumber = (num) => {
   const balancer = (arr) => {
     let max = arr[arr.length - 1];
     let min = arr[0];
-    if (max - min > 2) {
+    if (max - min > 1) {
       const diff = Math.floor((max - min) / 2);
       max -= diff;
       min += diff;
