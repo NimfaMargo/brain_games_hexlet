@@ -1,5 +1,9 @@
 import readlineSync from 'readline-sync';
+import evenGame from './games/even';
+import calcGame from './games/calc';
+import gcdGame from './games/gcd';
 
+const greet = () => console.log('Welcome to Brain Games!');
 export const getUsername = () => {
   const username = readlineSync.question('May I have your name? ', { defaultInput: 'Anonim' });
   console.log(`Hello, ${username}!\n`);
@@ -8,29 +12,43 @@ export const getUsername = () => {
 
 const lastGameLap = 3;
 
-const gameLoop = (questionFunc, username, lap) => {
+const gameLoop = (gameLogic, username, lap) => {
   if (lap === lastGameLap) {
     console.log(`Congratulations, ${username}!`);
     return;
   }
-  const answer = questionFunc(lap);
-
-  if (answer.user === answer.right) {
+  const game = gameLogic(lap);
+  console.log(`Question: ${game.question}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  const rightAnswer = game.answer;
+  if (userAnswer === rightAnswer) {
     console.log('Correct!');
-    gameLoop(questionFunc, username, lap + 1);
+    gameLoop(gameLogic, username, lap + 1);
   } else {
-    console.log(`'${answer.user}' is wrong answer ;(.
-    Correct answer was '${answer.right}'. Let's try again, ${username}`);
+    console.log(`'${userAnswer}' is wrong answer ;(.
+    Correct answer was '${rightAnswer}'. Let's try again, ${username}`);
   }
 };
 
-export const runGame = (game) => {
-  console.log('Welcome to Brain Games!');
-  console.log(game.rules);
-  return gameLoop(game.logic, getUsername(), 0);
+export const runEvenGame = () => {
+  greet();
+  console.log(evenGame.rule);
+  return gameLoop(evenGame.logic, getUsername(), 0);
+};
+
+export const runCalcGame = () => {
+  greet();
+  console.log(calcGame.rule);
+  return gameLoop(calcGame.logic, getUsername(), 0);
+};
+
+export const runGcdGame = () => {
+  greet();
+  console.log(gcdGame.rule);
+  return gameLoop(gcdGame.logic, getUsername(), 0);
 };
 
 export const runGames = () => {
-  console.log('Welcome to Brain Games!');
+  greet();
   getUsername();
 };
