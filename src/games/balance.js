@@ -1,4 +1,5 @@
 import { getRandomArbitrary, getBalanceNumber } from '../utils';
+import { runGame } from '..';
 
 const minNumber = 100;
 const maxNumber = 1000;
@@ -15,4 +16,5 @@ const game = {
   logic,
 };
 
-export default game;
+const start = () => runGame(game);
+export default start;

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { runEvenGame } from '..';
+import start from '../games/even';
 
-runEvenGame();
+start();

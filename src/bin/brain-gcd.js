@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { runGcdGame } from '..';
+import start from '../games/gcd';
 
-runGcdGame();
+start();

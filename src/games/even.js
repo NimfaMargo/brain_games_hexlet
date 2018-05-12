@@ -1,4 +1,5 @@
 import { getRandomNumber, isEven } from '../utils';
+import { runGame } from '..';
 
 const defineRightAnswer = number => (isEven(number) ? 'yes' : 'no');
 const maxNumber = 100;
@@ -13,4 +14,6 @@ const game = {
   rule: 'Answer "yes" if number even otherwise answer "no". \n',
   logic,
 };
-export default game;
+
+const start = () => runGame(game);
+export default start;

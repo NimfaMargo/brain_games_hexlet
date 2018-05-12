@@ -1,4 +1,5 @@
 import { getRandomNumber, gcd } from '../utils';
+import { runGame } from '..';
 
 const defineRightAnswer = (num1, num2) => gcd(num1, num2);
 const maxNumber = 100;
@@ -15,4 +16,6 @@ const game = {
   rule: 'Find the greatest common divisor of given numbers. \n',
   logic,
 };
-export default game;
+
+const start = () => runGame(game);
+export default start;
