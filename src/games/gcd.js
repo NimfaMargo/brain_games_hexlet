@@ -1,6 +1,7 @@
-import { getRandomNumber, gcd } from '../utils';
-import { runGame } from '..';
+import { getRandomNumber } from '../utils';
+import runGame from '..';
 
+const gcd = (num1, num2) => (num2 === 0 ? Math.abs(num1) : gcd(num2, num1 % num2));
 const defineRightAnswer = (num1, num2) => gcd(num1, num2);
 const maxNumber = 100;
 
@@ -13,7 +14,7 @@ const logic = () => {
 };
 
 const game = {
-  rule: 'Find the greatest common divisor of given numbers. \n',
+  rule: 'Find the greatest common divisor of given numbers.',
   logic,
 };
 

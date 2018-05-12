@@ -1,6 +1,7 @@
-import { getRandomNumber, isEven } from '../utils';
-import { runGame } from '..';
+import { getRandomNumber } from '../utils';
+import runGame from '..';
 
+const isEven = num => num % 2 === 0;
 const defineRightAnswer = number => (isEven(number) ? 'yes' : 'no');
 const maxNumber = 100;
 
@@ -11,7 +12,7 @@ const logic = () => {
 };
 
 const game = {
-  rule: 'Answer "yes" if number even otherwise answer "no". \n',
+  rule: 'Answer "yes" if number even otherwise answer "no".',
   logic,
 };
 
