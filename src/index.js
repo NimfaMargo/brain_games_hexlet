@@ -1,8 +1,4 @@
 import readlineSync from 'readline-sync';
-import evenGame from './games/even';
-import calcGame from './games/calc';
-import gcdGame from './games/gcd';
-import balanceGame from './games/balance';
 
 const greet = () => console.log('Welcome to Brain Games!');
 export const getUsername = () => {
@@ -31,28 +27,10 @@ const gameLoop = (gameLogic, username, lap) => {
   }
 };
 
-export const runEvenGame = () => {
+export const runGame = (game) => {
   greet();
-  console.log(evenGame.rule);
-  return gameLoop(evenGame.logic, getUsername(), 0);
-};
-
-export const runCalcGame = () => {
-  greet();
-  console.log(calcGame.rule);
-  return gameLoop(calcGame.logic, getUsername(), 0);
-};
-
-export const runGcdGame = () => {
-  greet();
-  console.log(gcdGame.rule);
-  return gameLoop(gcdGame.logic, getUsername(), 0);
-};
-
-export const runBalanceGame = () => {
-  greet();
-  console.log(balanceGame.rule);
-  return gameLoop(balanceGame.logic, getUsername(), 0);
+  console.log(game.rule);
+  return gameLoop(game.logic, getUsername(), 0);
 };
 
 export const runGames = () => {

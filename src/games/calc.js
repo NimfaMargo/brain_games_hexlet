@@ -1,4 +1,5 @@
 import { getRandomNumber } from '../utils';
+import { runGame } from '..';
 
 const sum = { name: '+', value: (x, y) => x + y };
 const subtraction = { name: '-', value: (x, y) => x - y };
@@ -20,4 +21,5 @@ const game = {
   logic,
 };
 
-export default game;
+const start = () => runGame(game);
+export default start;
