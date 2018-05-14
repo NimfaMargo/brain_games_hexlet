@@ -2,30 +2,30 @@ import { getRandomNumber } from '../utils';
 import runGame from '..';
 
 const maxNumber = 200;
-const isPrimeNum = (num) => {
-  if (num === 1 || num === 2) {
-    return 'yes';
+const isPrime = (num) => {
+  if (num === 2) {
+    return true;
   }
   let answer = '';
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i < 10; i += 1) {
     if (num % i === 0) {
-      answer = 'no';
+      answer = false;
       break;
     }
-    answer = 'yes';
+    answer = true;
   }
   return answer;
 };
 
-const logic = () => {
+const run = () => {
   const question = getRandomNumber(maxNumber);
-  const answer = isPrimeNum(question);
+  const answer = isPrime(question) ? 'yes' : 'no';
   return { answer, question };
 };
 
 const game = {
   rule: 'Answer "yes" if number even otherwise answer "no".',
-  logic,
+  run,
 };
 
 const start = () => runGame(game);
