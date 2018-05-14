@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const firstGameLap = 1;
-const lastGameLap = 4;
+const startGameLap = 1;
+const endGameLap = 4;
 
 const gameLoop = (gameFunction, username, lap) => {
-  if (lap === lastGameLap) {
-    console.log(`Congratulations, ${username}!`);
-    return;
+  if (lap === endGameLap) {
+    return true;
   }
   const game = gameFunction();
   console.log(`Question: ${game.question}`);
@@ -14,10 +13,10 @@ const gameLoop = (gameFunction, username, lap) => {
   const rightAnswer = game.answer;
   if (userAnswer === rightAnswer) {
     console.log('Correct!');
-    gameLoop(gameFunction, username, lap + 1);
-  } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'. Let's try again, ${username}`);
+    return gameLoop(gameFunction, username, lap + 1);
   }
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+  return false;
 };
 
 const runGame = (game) => {
@@ -25,7 +24,8 @@ const runGame = (game) => {
   console.log(`${game.rule} \n`);
   const username = readlineSync.question('May I have your name? ', { defaultInput: 'Anonim' });
   console.log(`Hello, ${username}!\n`);
-  return gameLoop(game.logic, username, firstGameLap);
+  const result = gameLoop(game.run, username, startGameLap) ? console.log(`Congratulations, ${username}!`) : console.log(`Let's try again, ${username}`);
+  return result;
 };
 
 export default runGame;
