@@ -1,26 +1,24 @@
 import { getRandomArbitrary } from '../utils';
 import runGame from '..';
 
-const getBalanceNumber = (num) => {
-  const arrStr = num.toString().split('').sort();
+const getBalancedNumber = (num) => {
+  const arrStr = num.toString().split('');
   const numArr = arrStr.map(el => parseInt(el, 10));
+  let sum = numArr.reduce((acc, currentValue) => acc + currentValue, 0);
+  const min = Math.floor(sum / (numArr.length));
+  const max = min + 1;
+  const newArr = [];
 
-  const balancer = (arr) => {
-    let max = arr[arr.length - 1];
-    let min = arr[0];
-    if (max - min > 1) {
-      const diff = Math.floor((max - min) / 2);
-      max -= diff;
-      min += diff;
-      arr.shift();
-      arr.pop();
-      arr.push(max);
-      arr.push(min);
-      return balancer(arr.sort());
+  for (let iter = numArr.length - 1; iter >= 0; iter -= 1) {
+    if (sum - max >= min * (iter)) {
+      newArr.push(max);
+      sum -= max;
+    } else {
+      newArr.push(min);
+      sum -= min;
     }
-    return arr.join('');
-  };
-  return balancer(numArr);
+  }
+  return parseInt(newArr.sort().join(''), 10);
 };
 
 const minNumber = 100;
@@ -28,9 +26,8 @@ const maxNumber = 1000;
 
 const logic = () => {
   const question = getRandomArbitrary(minNumber, maxNumber);
-  const balanceNum = getBalanceNumber(question);
-  const answer = balanceNum;
-  return { answer, question };
+  const balanceNum = getBalancedNumber(question).toString();
+  return { answer: balanceNum, question };
 };
 
 const game = {
