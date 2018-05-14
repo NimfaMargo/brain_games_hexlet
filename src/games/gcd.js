@@ -4,7 +4,7 @@ import runGame from '..';
 const gcd = (num1, num2) => (num2 === 0 ? Math.abs(num1) : gcd(num2, num1 % num2));
 const maxNumber = 100;
 
-const logic = () => {
+const run = () => {
   const randomNum1 = getRandomNumber(maxNumber);
   const randomNum2 = getRandomNumber(maxNumber);
   const answer = gcd(randomNum1, randomNum2).toString();
@@ -14,7 +14,7 @@ const logic = () => {
 
 const game = {
   rule: 'Find the greatest common divisor of given numbers.',
-  logic,
+  run,
 };
 
 const start = () => runGame(game);

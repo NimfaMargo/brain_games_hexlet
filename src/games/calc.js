@@ -8,7 +8,7 @@ const operationsArr = [sum, subtraction, multiplication];
 const randomIndex = Math.floor(Math.random() * operationsArr.length);
 const maxNumber = 100;
 
-const logic = () => {
+const run = () => {
   const randomNum1 = getRandomNumber(maxNumber);
   const randomNum2 = getRandomNumber(maxNumber);
   const mathOperation = operationsArr[randomIndex];
@@ -19,7 +19,7 @@ const logic = () => {
 
 const game = {
   rule: 'What is the result of the expression?',
-  logic,
+  run,
 };
 
 const start = () => runGame(game);

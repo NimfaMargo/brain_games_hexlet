@@ -24,7 +24,7 @@ const getBalancedNumber = (num) => {
 const minNumber = 100;
 const maxNumber = 1000;
 
-const logic = () => {
+const run = () => {
   const question = getRandomArbitrary(minNumber, maxNumber);
   const balanceNum = getBalancedNumber(question).toString();
   return { answer: balanceNum, question };
@@ -32,7 +32,7 @@ const logic = () => {
 
 const game = {
   rule: 'Balance the given number.',
-  logic,
+  run,
 };
 
 const start = () => runGame(game);

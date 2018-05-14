@@ -10,7 +10,7 @@ const getProgression = (firstElem, length, difference) => {
   return newArr;
 };
 
-const logic = () => {
+const run = () => {
   const maxNumber = 10;
   const length = 10;
   const progression = getProgression(random(maxNumber), length, random(maxNumber));
@@ -23,7 +23,7 @@ const logic = () => {
 
 const game = {
   rule: 'What number is missing in this progression?',
-  logic,
+  run,
 };
 
 const start = () => runGame(game);

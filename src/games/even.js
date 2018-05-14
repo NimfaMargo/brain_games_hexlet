@@ -5,7 +5,7 @@ const isEven = num => num % 2 === 0;
 const defineRightAnswer = number => (isEven(number) ? 'yes' : 'no');
 const maxNumber = 100;
 
-const logic = () => {
+const run = () => {
   const question = getRandomNumber(maxNumber);
   const answer = defineRightAnswer(question);
   return { answer, question };
@@ -13,7 +13,7 @@ const logic = () => {
 
 const game = {
   rule: 'Answer "yes" if number even otherwise answer "no".',
-  logic,
+  run,
 };
 
 const start = () => runGame(game);
