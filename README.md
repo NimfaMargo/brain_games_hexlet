@@ -9,7 +9,7 @@
 You need npm. It is bundled with [node](https://nodejs.org/en/download/)
 
 ```
-$ sudo npm i -g braingames_margo
+$ npm i -g braingames_margo
 ```                                    
 ## RUN
 
@@ -37,5 +37,5 @@ The point of the game: the user is shown a random number. Answer yes,if the numb
 ## UNINSTALL
 
 ```
-$ sudo npm uninstall -g braingames_margo
+$ npm uninstall -g braingames_margo
 ```    
