@@ -8,36 +8,24 @@
 ### SETUP
 ```
 $ sudo npm i -g braingames_margo
-```
+```                                    
 
-1. **isEven number**                                  
+1. **isEven number** `$ brain-even`                          
 The point of the game: the user is shown a random number. Answer yes,if the number is even, or no - if odd.
 
- `$ brain-even`
+2. **Calculator** `$ brain-calc`       
+The point of the game: the user is shown a random mathematical expression, calculate and write the correct answer.
 
-2. **Calculator**   
- The point of the game: the user is shown a random mathematical expression, calculate and write the correct answer.
+3. **Find GCD** `$ brain-gcd`           
+The point of the game: the user is shown two random numbers, calculate and enter the greatest common divisor of these numbers.
 
- `$ brain-calc`
-
-3. **Find GCD**   
- The point of the game: the user is shown two random numbers, calculate and enter the greatest common divisor of these numbers.
-
- `$ brain-gcd`
-
-4. **Balance the number**   
+4. **Balance the number** `$ brain-balance`             
 The point of the game: the user is shown two random number, balance the number.   
- A balanced number is a number in which the smallest digit differs from the largest one by 1.
+A balanced number is a number in which the smallest digit differs from the largest one by 1.
 
- `$ brain-balance`
-
-5. **Find missing number in progression**  
+5. **Find missing number in progression** `$ brain-progression`         
 The point of the game: the user is shown a series of numbers, forming an arithmetic progression, one random number replaced with two points.   
 The player need to determine this number.   
 
- `$ brain-progression`
-
-6. **isPrime number**   
+6. **isPrime number** `$ brain-prime`             
 The point of the game: the user is shown a random number. Answer yes,if the number is prime, or no - if odd.
-
- `$ brain-prime`
