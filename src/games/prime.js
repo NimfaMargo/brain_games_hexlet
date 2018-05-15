@@ -3,18 +3,16 @@ import runGame from '..';
 
 const maxNumber = 200;
 const isPrime = (num) => {
-  if (num === 2) {
-    return true;
+  if (num < 2) {
+    return false;
   }
-  let answer = '';
-  for (let i = 2; i < 10; i += 1) {
+
+  for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
-      answer = false;
-      break;
+      return false;
     }
-    answer = true;
   }
-  return answer;
+  return true;
 };
 
 const run = () => {
@@ -24,7 +22,7 @@ const run = () => {
 };
 
 const game = {
-  rule: 'Answer "yes" if number even otherwise answer "no".',
+  rule: 'Answer "yes" if number prime otherwise answer "no".',
   run,
 };
 
