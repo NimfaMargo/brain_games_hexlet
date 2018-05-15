@@ -1,6 +1,6 @@
 {
   "name": "braingames_margo",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "A set of mini games called 'Brain Games'",
   "files": [
     "dist"
