@@ -5,7 +5,9 @@
 
 ### A set of six different minigames.
 
-### SETUP
+### INSTALL
+You need npm. It is bundled with [node](https://nodejs.org/en/download/)
+
 ```
 $ sudo npm i -g braingames_margo
 ```                                    
@@ -29,3 +31,10 @@ The player need to determine this number.
 
 6. **isPrime number** `$ brain-prime`             
 The point of the game: the user is shown a random number. Answer yes,if the number is prime, or no - if odd.
+
+
+### UNINSTALL
+
+```
+$ sudo npm uninstall -g braingames_margo
+```    
