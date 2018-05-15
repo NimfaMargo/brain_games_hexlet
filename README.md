@@ -3,14 +3,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/484be2fe44a60216f6ec/maintainability)](https://codeclimate.com/github/NimfaMargo/project-lvl1-s268/maintainability)
 [![Build Status](https://travis-ci.com/NimfaMargo/project-lvl1-s268.svg?branch=master)](https://travis-ci.com/NimfaMargo/project-lvl1-s268)
 
-### A set of six different minigames.
+### A set of six mathematical minigames.
 
-### INSTALL
+## INSTALL
 You need npm. It is bundled with [node](https://nodejs.org/en/download/)
 
 ```
 $ sudo npm i -g braingames_margo
 ```                                    
+## RUN
 
 1. **isEven number** `$ brain-even`                          
 The point of the game: the user is shown a random number. Answer yes,if the number is even, or no - if odd.
@@ -33,7 +34,7 @@ The player need to determine this number.
 The point of the game: the user is shown a random number. Answer yes,if the number is prime, or no - if odd.
 
 
-### UNINSTALL
+## UNINSTALL
 
 ```
 $ sudo npm uninstall -g braingames_margo
