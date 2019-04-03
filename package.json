@@ -1,6 +1,6 @@
 {
   "name": "braingames_margo",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "A set of mini games called 'Brain Games'",
   "files": [
     "dist"
@@ -23,9 +23,15 @@
   },
   "author": "Margarita Nikiforova",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NimfaMargo/brain_games_hexlet.git"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^8.2.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
