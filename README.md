@@ -1,7 +1,7 @@
 # Brain Games
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3cbf734dd6a22095861d/maintainability)](https://codeclimate.com/github/NimfaMargo/brain_games_hexlet/maintainability)
-[![Build Status](https://travis-ci.com/NimfaMargo/project-lvl1-s268.svg?branch=master)](https://travis-ci.com/NimfaMargo/project-lvl1-s268)
+[![Build Status](https://travis-ci.com/NimfaMargo/brain_games_hexlet.svg?branch=master)](https://travis-ci.com/NimfaMargo/brain_games_hexlet)
 
 ### A set of six mathematical minigames.
 
