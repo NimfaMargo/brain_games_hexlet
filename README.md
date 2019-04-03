@@ -5,13 +5,13 @@
 
 ### A set of six mathematical minigames.
 
-## INSTALL
+## Install
 You need npm. It is bundled with [node](https://nodejs.org/en/download/)
 
 ```
 $ npm i -g braingames_margo
 ```                                    
-## RUN
+## Run
 
 1. **isEven number** `$ brain-even`                          
 The point of the game: the user is shown a random number. Answer yes,if the number is even, or no - if odd.
@@ -31,11 +31,9 @@ The point of the game: the user is shown a series of numbers, forming an arithme
 The player need to determine this number.   
 
 6. **isPrime number** `$ brain-prime`             
-The point of the game: the user is shown a random number. Answer yes,if the number is prime, or no - if odd.
+The point of the game: the user is shown a random number. Answer yes, if the number is prime, or no - if odd.
 
-
-## UNINSTALL
-
+## Uninstall
 ```
 $ npm uninstall -g braingames_margo
 ```    
