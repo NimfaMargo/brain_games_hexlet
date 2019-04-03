@@ -20,9 +20,9 @@ const gameLoop = (gameFunction, lap) => {
 
 const runGame = (game) => {
   console.log('Welcome to Brain Games!');
-  console.log(`${game.rule} \n`);
   const username = readlineSync.question('May I have your name? ', { defaultInput: 'Anonim' });
   console.log(`Hello, ${username}!\n`);
+  console.log(`${game.rule} \n`);
 
   if (gameLoop(game.run, 0)) {
     console.log(`Congratulations, ${username}!`);
